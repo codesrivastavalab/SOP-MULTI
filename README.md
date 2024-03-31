@@ -3,7 +3,7 @@ SOP-MULTI is a LAMMPS package for simulating IDP and Multidomain Proteins
 
 
 Usage instructions:
-Place all the folders from lammps-SOP-MULTI-src in the src folder of the LAMMPS source code and use <br/>
+Place all the files and folders from lammps-SOP-MULTI-src in the src folder of the LAMMPS source code and use <br/>
 $ make yes-SOP-MULTI <br/>
 $ make yes-OPENMP (optional, openmp acceleration. Note: No significant enhancement in the runtime was observed with single molecule systems)
 
