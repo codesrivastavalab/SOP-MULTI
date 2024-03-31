@@ -1,5 +1,5 @@
 # SOP-MULTI
-SOP-MULTI is a LAMMPS package for simulating IDP and Multidomain Proteins
+SOP-MULTI is a LAMMPS package for simulating IDP and Multidomain Proteins with Self Organized Polymer model
 
 
 Usage instructions:
