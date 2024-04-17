@@ -1,0 +1,126 @@
+#lammps Input File for SOP-MULTI
+
+# variable to set the input filename
+variable 	data_filename data.TDP-43 
+
+
+# variable to set the dump frequency
+variable        output_freq string 1000 
+
+# variable to set the temperature
+variable	my_temp string 298.15 
+
+# variable to set the Langevin thermostat's damping parameter
+variable 	langevin_damp_fac string 2000
+
+# Units
+units          real
+
+# Dimension of the system
+dimension      3
+
+# Periodic boundary condition
+boundary       p p p
+
+# atom style
+atom_style     sop_bead
+
+#  turns on a spatial sorting atoms within each processor's subdomain every Nfreq timesteps and given binsize
+# check https://docs.lammps.org/atom_modify.html for more info 
+atom_modify sort 1000 10.0
+
+# Bond style
+bond_style fene/sop
+
+# Read SOP-MULTI input file
+read_data       ${data_filename} 
+
+# Set the charges of bead types with charges
+set type 4  charge 1.0
+set type 5  charge 1.0
+set type 6 charge 1.0
+set type 7  charge -1.0
+set type 8  charge -1.0
+
+# Turns on the Special bonds related to SOP-MULTI forcefield
+special_bonds sop_ff
+
+# Assign Masses of individual bead types
+mass	1	56.0440	#CA Backbone bead mass of all amino acids 
+mass	2	57.0510	#Bead mass of GLY
+mass	3	15.0340	#CB side chain bead mass of ALA
+mass	4	101.150	#CB side chain bead mass of ARG
+mass	5	73.1360	#CB side chain bead mass of LYS
+mass	6	81.0950	#CB side chain bead mass of HIS
+mass	7	58.0350	#CB side chain bead mass of ASP
+mass	8	72.0620	#CB side chain bead mass of GLU
+mass	9	31.0330	#CB side chain bead mass of SER
+mass	10	45.0600	#CB side chain bead mass of THR
+mass	11	58.0590	#CB side chain bead mass of ASN
+mass	12	61.0800	#CB side chain bead mass of GLN
+mass	13	47.0990	#CB side chain bead mass of CYS
+mass	14	41.0710	#CB side chain bead mass of PRO
+mass	15	57.1140	#CB side chain bead mass of ILE
+mass	16	57.1140	#CB side chain bead mass of LEU
+mass	17	75.1520	#CB side chain bead mass of MET
+mass	18	91.1300	#CB side chain bead mass of PHE
+mass	19	130.166	#CB side chain bead mass of TRP
+mass	20	107.129	#CB side chain bead mass of TYR
+mass	21	43.0870	#CB side chain bead mass of VAL
+
+# Include the forcefield parameters file
+include         forcefield.sop_multi
+
+
+# Neighbor list settings for energy minimization
+neighbor        3.5   multi 
+neigh_modify    every 1 delay 0
+
+# Energy minimization
+minimize 1.0e-4 1.0e-6 1000 10000
+minimize 1.0e-4 1.0e-6 1000 10000
+minimize 1.0e-4 1.0e-6 1000 10000
+
+# Neighbor list settings for 
+neighbor        3.5   multi 
+neigh_modify    every 1 delay 0
+
+#  Inter-processor communication style
+comm_style    tiled
+
+# Log file dmpinng parameters
+thermo_style    custom step temp pe etotal ecoul 
+thermo          ${output_freq}
+
+# Reset the timestep to t=0
+reset_timestep 0
+
+# Trajectory dump settings
+dump             2 all custom ${output_freq} traj.lammpstrj id mol type q xu yu zu 
+dump_modify      2 sort id
+
+# Timestep in femtoseconds
+timestep  10.0
+
+# Fix the thermostat settings
+fix           fxnve   all   nve
+fix           fxlange all  langevin ${my_temp} ${my_temp} ${langevin_damp_fac} 3278
+fix           fxbal  all balance 1000 1.05 rcb
+
+# Keeps the molecule at the center of the box
+fix 1 all recenter 0.0 0.0 0.0
+
+
+
+# Frequency of dumping restart files
+restart      10000000 restart
+
+# Number of timesteps of simulation
+run 1000000000
+#run 2000000000 upto
+#run 3000000000 upto
+#run 4000000000 upto
+#run 5000000000 upto
+#run        10000 #for scaling test
+
+

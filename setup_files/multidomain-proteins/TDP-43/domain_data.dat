@@ -1,0 +1,11 @@
+#columns 1:from_residue 2:to_residue 3:domain_id
+# 0 indicates IDR/non-folded regions
+
+1	78	1
+79	103	0
+104	178	2
+179	190	0
+191	259	3
+260	319	0
+320	341	4
+342	414	0
