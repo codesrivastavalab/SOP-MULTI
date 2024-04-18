@@ -92,7 +92,7 @@ mapping_vector = np.array([2,3,4,11,7,13,8,12,6,15,16,5,17,18,14,9,10,19,20,21,1
 
 prefac = [0.4352,0.5731,0.3035]
 # Read bead details
-bead_details = pandas.read_csv("sop_bead_details.csv")
+bead_details = pandas.read_csv("sop_model_library/sop_bead_details.csv")
 
 #print(bead_details)
 
