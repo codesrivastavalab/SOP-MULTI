@@ -1,7 +1,7 @@
 #lammps Input File for SOP-MULTI
 
 # variable to set the input filename
-variable 	data_filename data.TDP-43 
+variable 	data_filename string data.TDP-43 
 
 
 # variable to set the dump frequency
