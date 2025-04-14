@@ -17,12 +17,12 @@ Sonntag, Miriam, et al. "Segmental, Domain‐Selective Perdeuteration and Small�
 Ref: [ https://doi.org/10.1002/ange.201702904](https://doi.org/10.1002/ange.201702904) <br/>
 Larsen, Andreas Haahr, et al. "Combining molecular dynamics simulations with small-angle X-ray and neutron scattering data to study multi-domain proteins in solution." PLoS computational biology 16.4 (2020): e1007870. <br/>
 Ref: [ https://doi.org/10.1371/journal.pcbi.1007870](https://doi.org/10.1002/ange.201702904) <br/>
-[Data](https://github.com/KULL-Centre/papers/tree/main/2020/TIA1-SAS-Larsen-et-al)
+[Data: https://github.com/KULL-Centre/papers/tree/main/2020/TIA1-SAS-Larsen-et-al](https://github.com/KULL-Centre/papers/tree/main/2020/TIA1-SAS-Larsen-et-al)
 
 ## hGHR-ECD
 Kassem, Noah, et al. "Order and disorder—An integrative structure of the full-length human growth hormone receptor." Science advances 7.27 (2021): eabh3805. <br/>
 Ref: [ https://doi.org/10.1126/sciadv.abh3805](https://doi.org/10.1126/sciadv.abh3805) <br/>
-[Data](https://github.com/Niels-Bohr-Institute-XNS-StructBiophys/GHRSASData/tree/main/GHR-ECD%5BFigure1C%5D)
+[Data: https://github.com/Niels-Bohr-Institute-XNS-StructBiophys/GHRSASData/tree/main/GHR-ECD%5BFigure1C%5D](https://github.com/Niels-Bohr-Institute-XNS-StructBiophys/GHRSASData/tree/main/GHR-ECD%5BFigure1C%5D)
 
 ## HIV1-GAG_WM,  [lacking P6, tryptophan-316 and methionine-317 mutated to alanine)]
 Datta, Siddhartha AK, et al. "Conformation of the HIV-1 Gag protein in solution." Journal of molecular biology 365.3 (2007): 812-824.
