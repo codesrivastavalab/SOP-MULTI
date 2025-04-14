@@ -15,7 +15,7 @@ Sonntag, Miriam, et al. "Segmental, Domain‐Selective Perdeuteration and Small�
 Ref: [ https://doi.org/10.1002/ange.201702904](https://doi.org/10.1002/ange.201702904) <br/>
 Larsen, Andreas Haahr, et al. "Combining molecular dynamics simulations with small-angle X-ray and neutron scattering data to study multi-domain proteins in solution." PLoS computational biology 16.4 (2020): e1007870. <br/>
 Ref: [ https://doi.org/10.1371/journal.pcbi.1007870](https://doi.org/10.1002/ange.201702904) <br/>
-[Data: https://github.com/KULL-Centre/papers/tree/main/2020/TIA1-SAS-Larsen-et-al](https://github.com/KULL-Centre/papers/tree/main/2020/TIA1-SAS-Larsen-et-al)
+Data: [https://github.com/KULL-Centre/papers/tree/main/2020/TIA1-SAS-Larsen-et-al](https://github.com/KULL-Centre/papers/tree/main/2020/TIA1-SAS-Larsen-et-al)
 
 ## hGHR-ECD
 Kassem, Noah, et al. "Order and disorder—An integrative structure of the full-length human growth hormone receptor." Science advances 7.27 (2021): eabh3805. <br/>
