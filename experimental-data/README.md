@@ -2,8 +2,8 @@
 The experimental scattering data used in the article were pooled from multiple published articles (cited below). <br/>
 We thank all the research groups associated with these articles for making the scattering data available. 
 
-In cases where the data was unavailable, we extracted the datapoints from the original article using the WebPlotDigitizer([https://automeris.io](https://automeris.io). <br/>
-Rohatgi, Ankit. "WebPlotDigitizer https://automeris.io." WebPlotDigitizer2018 (2017).
+In cases where the data was unavailable, we extracted the datapoints from the original article using the WebPlotDigitizer([https://automeris.io](https://automeris.io)). <br/>
+Ref: Rohatgi, Ankit. "WebPlotDigitizer https://automeris.io." WebPlotDigitizer2018 (2017).
 
 ## TDP-43 (W2A, all tryptophan residues mutated to alanine)
 The data points were extracted from the scattering curve reported in the following article
